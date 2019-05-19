@@ -10,8 +10,10 @@
         Title="MainWindow" Height="450" Width="800"
         x:ClassModifier="internal">
 
-    <Grid>
+    <StackPanel Orientation="Vertical">
         <TextBlock FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"
                    Text="{Binding Path=Message, Mode=OneWay}" />
-    </Grid>
+        <Button HorizontalAlignment="Center" Margin="5" Width="400" Height="100" FontSize="40"
+                Content="Get geolocation!" Command="{Binding Path=GetGeolocation, Mode=OneWay}"/>
+    </StackPanel>
 </Window>
