@@ -5,7 +5,6 @@ using Windows.System;
 
 using Prism.Commands;
 using Prism.Mvvm;
-using System.Diagnostics;
 
 namespace MyApps.ViewModels
 {

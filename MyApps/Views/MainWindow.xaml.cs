@@ -1,8 +1,6 @@
-﻿using System.Windows;
-
-namespace MyApps.Views
+﻿namespace MyApps.Views
 {
-    internal partial class MainWindow : Window
+    internal partial class MainWindow
     {
         public MainWindow()
         {

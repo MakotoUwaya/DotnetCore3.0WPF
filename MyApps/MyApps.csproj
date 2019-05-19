@@ -5,8 +5,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <StartupObject>MyApps.App</StartupObject>
-    <ApplicationManifest>package.appxmanifest</ApplicationManifest>    <ApplicationManifest>package.appxmanifest</ApplicationManifest>
-
+    <ApplicationManifest>package.appxmanifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
