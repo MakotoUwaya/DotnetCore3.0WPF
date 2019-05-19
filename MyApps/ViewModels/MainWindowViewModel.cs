@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
 using Windows.Devices.Geolocation;
+using Windows.System;
 
 using Prism.Commands;
 using Prism.Mvvm;
+using System.Diagnostics;
 
 namespace MyApps.ViewModels
 {
@@ -36,16 +38,19 @@ namespace MyApps.ViewModels
                 var position = location.Coordinate.Point.Position;
                 var latlong = string.Format("lat:{0}, long:{1}", position.Latitude, position.Longitude);
                 this.Message = $"Get Geoposition\n{latlong}";
+                return;
             }
             else if (accessStatus == GeolocationAccessStatus.Denied)
             {
                 // No Accesss
-                this.Message = "Geolocation permision denied\nSet to allow apps to access your location.";
+                this.Message = "Geolocation permission denied\nSet to allow apps to access your location.";
+
             }
             else
             {
                 this.Message = "Undefined geolocation settings\nSet to allow apps to access your location.";
             }
+            await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-location"));
         }
     }
 }
