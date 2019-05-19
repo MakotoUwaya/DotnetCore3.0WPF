@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApps", "MyApps\MyApps.csproj", "{2AC10C62-8B31-4422-A5A6-9348CFF172C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApps", "MyApps\MyApps.csproj", "{2AC10C62-8B31-4422-A5A6-9348CFF172C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETWApp", "ETWApp\ETWApp.csproj", "{B141F0B0-CA91-4BE2-BDC0-B2C40B8ABF3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2AC10C62-8B31-4422-A5A6-9348CFF172C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AC10C62-8B31-4422-A5A6-9348CFF172C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AC10C62-8B31-4422-A5A6-9348CFF172C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B141F0B0-CA91-4BE2-BDC0-B2C40B8ABF3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B141F0B0-CA91-4BE2-BDC0-B2C40B8ABF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B141F0B0-CA91-4BE2-BDC0-B2C40B8ABF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B141F0B0-CA91-4BE2-BDC0-B2C40B8ABF3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
