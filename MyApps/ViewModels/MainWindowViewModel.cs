@@ -1,4 +1,9 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using System.Windows.Input;
+using Windows.Devices.Geolocation;
+
+using Prism.Commands;
+using Prism.Mvvm;
 
 namespace MyApps.ViewModels
 {
@@ -11,9 +16,36 @@ namespace MyApps.ViewModels
             set { this.SetProperty(ref this._message, value); }
         }
 
+        public ICommand GetGeolocation { get; }
+
         public MainWindowViewModel()
         {
-            this.Message = "Greet.";
+            this.Message = "Hello .NET Core 3.0 WPF World!";
+            this.GetGeolocation = new DelegateCommand(this.GetGeolocationAsync);
+        }
+
+        private async void GetGeolocationAsync()
+        {
+            var accessStatus = await Geolocator.RequestAccessAsync();
+
+            if (accessStatus == GeolocationAccessStatus.Allowed)
+            {
+                // Put all your Code here to access location services
+                var locator = new Geolocator();
+                var location = await locator.GetGeopositionAsync();
+                var position = location.Coordinate.Point.Position;
+                var latlong = string.Format("lat:{0}, long:{1}", position.Latitude, position.Longitude);
+                this.Message = $"Get Geoposition\n{latlong}";
+            }
+            else if (accessStatus == GeolocationAccessStatus.Denied)
+            {
+                // No Accesss
+                this.Message = "Geolocation permision denied\nSet to allow apps to access your location.";
+            }
+            else
+            {
+                this.Message = "Undefined geolocation settings\nSet to allow apps to access your location.";
+            }
         }
     }
 }

@@ -5,11 +5,14 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <StartupObject>MyApps.App</StartupObject>
+    <ApplicationManifest>package.appxmanifest</ApplicationManifest>    <ApplicationManifest>package.appxmanifest</ApplicationManifest>
+
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Unity" Version="7.2.0.1038-pre" />
-    <PackageReference Include="Prism.Wpf" Version="7.2.0.1038-pre" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.18362.2002-preview" />
+    <PackageReference Include="Prism.Unity" Version="7.2.0.1233-pre" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1233-pre" />
   </ItemGroup>
 
 </Project>
